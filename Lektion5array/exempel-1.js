@@ -1,50 +1,75 @@
-//Arbeta med array
+// Arbeta med arrayer i JavaScript
 
-//Skapa en tom array
-let = cars1 = []
+// Skapa en tom array
+let cars1 = [];
 
-//Skapa en array som innehåller data
-let cars2 = ["Volvo","Saab","Koenigsegg"]
-//Detta är en array-literal
+// Skapa en array som innehåller data
+let cars2 = ["Volvo" , "Saab", "BMW"];
+// Detta är en array-literal
 
-//Skapa en array med en konstruktor
-let cars3 = new Array(1,2,3)
-let cars4 = new Array() //Tom array
+// Skapa en array med en konstruktor
+let cars3 = new Array(1 , 2 , 3);
+let cars4 = new Array();  // en tom array
 
-//Att komma åt data
-console.log(cars2[0])
-console.log(cars2[1])
-console.log(cars2[2])
-console.log(cars2)
-console.log(cars2[3]) //Undefined
+// Att komma åt data
+console.log(cars2[0]);
+console.log(cars2[1]);
+console.log(cars2[2]);
+console.log(cars2);
+console.log(cars2[3]);
 
-let bil1 = cars2[0]
-console.log(bil1)
+// Hämta ett element och spara i en ny variabel
+let car1 = cars2[0];
+console.log(car1);
 
-//Ändra ett element
-cars2[0] = "Mazda"
-console.log(cars2)
-console.log(bil1)
+// Ändra ett element
+cars2[0] = "Mazda";
+console.log(cars2);
+console.log(car1);
 
-//En array kan innehålla olika typer
-let person = ["Burhan","BUdak", 26,true];
+// En array i JS kan innehålla olika typer
+let person = ["Mahmud" , "Al Hakim" , 45 , true];
 
-//Du kan skapa 4 olika variabler istället för en array
-let firstName = "Burhan"
-let lastName = "Budak"
-let age = 26;
-let cool = true;
+// Du kan skapa 4 olika variabler istället för en array
+let firstName = "Mahmud";
+let lastName = "Al Hakim";
+let age = 45;
+let married = true;
 
-//Hitta antal element med egenskapen .lenght
+// Hitta antal element med egenskapen length
 let antal = person.length;
 console.log(antal);
 
-//Sotera en array
+// Sortera en array
 console.log(cars2);
-cars2.sort()
+cars2.sort();
 console.log(cars2);
-
-//Arbeta med en "stack"
+console.log("---------------");
+// Att hitta sista elementet 
+let customers = [
+    "Kund 1",
+    "Kund 2",
+    "Kund 3",
+    "Kund 4",
+    "Kund 5",
+    "Kund 6",
+    "Kund 7",
+    "Kund 8",
+    "Kund 9",
+    "Kund 10",
+];
+// Skriv ut antal element
+console.log(customers.length);
+// Skriv ut sista indexet
+console.log(customers.length-1);
+// Hämta antal element 
+antal = customers.length;
+// Leta efter sista indexet
+let lastIndex = antal-1;
+// Hämta sista kunden
+let sista = customers[lastIndex];
+// Skriv ut sista elementet
+console.log(sista);
 
 console.log("----------------------");
 
@@ -103,9 +128,3 @@ console.log(test3.length);
 let test4 = new Array('10'); 
 console.log(test4);
 console.log(test4.length);
-
-//Test cars
-
-let cars = new Array(2);
-cars[cars.length] = "Volvo";
-console.log(cars);

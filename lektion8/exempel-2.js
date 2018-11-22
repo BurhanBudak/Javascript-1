@@ -46,7 +46,7 @@ persons[0].name = 'Mahmud';
 console.log(persons[0].name);
 
 //Objekt kan innehålla arrayer
-//mahmud.children 0 = [];
+mahmud.children = [];
 
 kalle.name = 'Mehdi';
 mahmud.children.push(kalle);

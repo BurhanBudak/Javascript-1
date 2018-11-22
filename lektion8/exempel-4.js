@@ -1,21 +1,22 @@
 // Några användbara metoder i objektet Window
 
-//1. Prompt (inmatningsfält) och alert (popup-ruta)
+// 1. prompt (inmatningsfält) och alert (popup-ruta)
 let person = prompt('Vad heter du?');
-//alert('hej '+person);
+alert('Hej ' + person);
 
-//2.setTimeout
-setTimeout(helloPopup,5000)   //Gör anrop till funktionen och alert startar efter 5 sekunder
+// 2. setTimeout
+// Kör en funktion efter ett antal sekunder
+setTimeout(helloPopup, 3000);  // 3000 = 3 sekunder
 
-//3.setIntervall. Kör en funktion flera gånger,
-//efter ett visst antal sekunder
-setInterval(helloConsole ,5000);
+// 3. setIntervall
+// Repeterar en funktion flera gånger, 
+// efter ett förutbestämt intervall (antal millisekunder)
+setInterval(helloConsole , 1000);
 
-
-function helloConsole(){
-    console.log(person);
+function helloPopup() {
+    alert('Hej ' + person);
 }
 
-function helloPopup(){
-        alert('hej ' + person);
-    }
+function helloConsole() {
+    console.log(person);
+}

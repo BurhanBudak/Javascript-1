@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Exempel-8</h1>
+        <p>Stycke 1</p>
+        <p>stycke 2.</p>
+        <p>stycke 3</p>
+    <script>
+        //Hämta alla p-element
+        let p = document.getElementsByTagName('p');
+        for (let i = 0; i < p.length; i++) {
+            //Hämta 
+            let s = p[i].innerHTML;
+            s = capitalize(s);
+            s = dot(s);
+            p[i].innerHTML = s;
+        }
+        function capitalize(s){
+            return s.charAt(0).toUpperCase(); + s.substring(1);
+        }
+        function dot(s) {
+            if (s[s.length-1] !== '.') {
+            //Om inte så ska skriptet lägga till en punkt.
+            return s += '.';
+            }
+            return s;
+        }
+        </script>
+    
+</body>
+</html>

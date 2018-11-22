@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id='h'>Huvudrubrik</h1>
+    <script>
+        let h = document.getElementById('h');
+        //Dela upp logiken och hämta  texten från element
+        /*let text = h.innerHTML;
+        //Ändra text till versaler
+        text = text.toUpperCase(); //Är string JS mutable/immutable
+        //Skicka den nya texten till element
+        h.innerHTML = text;
+        */
+       //Eller med 'snyggare' källkod
+       h.innerHTML = h.innerHTML.toUpperCase();
+        console.log(text);
+    </script>
+</body>
+</html>

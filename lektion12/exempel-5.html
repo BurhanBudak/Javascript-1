@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 5</title>
+    <style>
+    .nice{
+        color: green;
+        font-size : 50px;
+        background-color: crimson;
+    }
+    </style>
+</head>
+<body>
+    <h1>Exempel 5</h1>
+
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+    <h1>Rubrik</h1>
+    <script>
+        //Hämta alla h1
+    let allH1 = document.getElementsByTagName('h1'); //Gör allH1 till en pseudo array
+
+    //Lägg till klassen nice
+    allH1[0].className = 'nice';
+
+    //extra fråga
+    //
+    allH1[allH1.length-1].className = 'nice';
+    </script>
+</body>
+</html>

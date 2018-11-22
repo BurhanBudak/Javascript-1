@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 4</title>
+</head>
+<body>
+    <h1>Exempel 4</h1>
+
+    <button onmouseover="hideElementById('demo')"
+    onmouseout="showElementById('demo')">
+    Visa/Dölj
+    </button>
+
+    <hr>
+
+    <button onmouseover="hideElementById('demo')">DÖLJ</button>
+    <button onmouseover="showElementById('demo')">Visa</button>
+
+    <hr>
+
+    <p id= 'demo' >Dölj texten genom att klicka på knappen dölj!</p>
+
+<button onclick= "hideElementById('demo');">
+    Dölj
+</button>
+
+<button onclick= "showElementById('demo')">
+    Visa
+</button>
+
+<script src="exempel-1.js">
+</script>
+</body>
+</html>

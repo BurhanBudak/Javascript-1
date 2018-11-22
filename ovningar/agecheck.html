@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ålder koll</title>
+</head>
+<body>
+    
+    <h1>Burhan Budak</h1>
+    <p id="birthdate" ></p>
+
+    <script>
+        while (true) {
+    let birthdate = prompt('Ange ditt födelsedatum i detta format ÅÅÅÅ-MM-DD', "1992-03-24");
+    console.log(birthdate);
+    //Kontrollera inmatning
+    if (birthdate===null) {
+        break;
+    }//ESC avbryter
+    if(birthdate.length !== 10){
+        alert('Felaktigt antal tecken!');
+        continue;
+    }
+    if(birthdate.charAt(4) !== '-'){
+        alert('Första - saknas! FÖLJ INSTUKTIONERNA!')
+        continue;
+    }
+    if(birthdate.charAt(7) !== '-'){
+        alert('Andra - saknas! FÖLJ INSTUKTIONERNA!')
+        continue;
+    }
+    //XXXX-XX-XX
+    birthdate = birthdate.split('-');
+    console.log(birthdate);
+    /*Kontrollerar tecken*/
+    let year = Number(birthdate[0]);
+    console.log(year);
+    if(isNaN(year)){
+        alert('Felaktig år');
+        continue;
+    }
+    let month = Number(birthdate[1]);
+    if(isNaN(month) || month<1 || month>12){
+        alert('Felaktiv månad');
+        continue;
+    }
+    let date = Number(birthdate[2]);
+    if(isNaN(date) || date<1 || date>31){
+        alert('Felaktiv dag');
+        continue;
+    }
+    /*
+    Programmet ska räkna ut personens ålder.
+    */
+
+    /*
+    Vissa på webbsidan hur många år,månader och dagar personen är gammal.
+    */
+    
+    let now = new Date();
+    let nowYear = now.getFullYear(); //2018
+    let nowMonth = now.getMonth()+1; //11
+    let nowDate = now.getDate();    //7
+
+    console.log(nowYear,nowMonth,nowDate);
+    //OBS! MIna variabler heter year,month,date
+    console.log(year,month,date);
+
+    let years = nowYear - year;
+    let mount = Number(birthdate[1]);
+    if(isNaN(month) || month<1 || month>12){
+        alert('Felaktiv månad');
+        continue;
+    }
+    
+    let months = nowMonth -month;
+    if(months < 0){
+        years--;
+        months +=12;
+    }
+    
+    let days = nowDate - date;
+    if(days < 0){
+        months--;
+        days +=31;
+    }
+
+    console.log(years);
+    console.log(months);
+    console.log(days);
+
+    let el = document.getElementById('birthdate');
+    el.innerHTML = "<h2>Du har angett följande födelsedatum " +
+        birthdate.join('-') + "</h2>";
+    el.innerHTML += "<h2>Du är " + years + " år, " + months + " månader och "+ days+ " dagar gammal.</h2>"; 
+
+    break;
+    }//while
+
+    
+    </script>
+
+
+</body>
+</html>

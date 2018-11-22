@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exempel 7</title>
+</head>
+<body>
+    <h1>Exempel-7</h1>
+    <p>Stycke 1</p>
+    <p>stycke 2.</p>
+    <p>stycke 3</p>
+
+    <script>
+        //Hämtar alla p-element
+    let p = document.getElementsByTagName('p');
+    console.log(p);
+    //Iterera över en HTMLCollection
+    for (let i = 0; i < p.length; i++) {
+        //Hämta innehållet
+        let text = p[i].innerHTML;
+        //Undersöka om varje stycke avslutas med en punkt
+        if (text[text.length-1] !== '.') {
+            //Om inte så ska skriptet lägga till en punkt.
+            text += '.';
+        }
+        //Uppdatera trädet
+        p[i].innerHTML = text;
+    }
+    </script>
+</body>
+</html>
