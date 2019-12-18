@@ -9,7 +9,7 @@ function random() {
     let antal = (Math.floor(Math.random()*3)+10);
     console.log(antal);
     for (let i = 0; i <= antal; i++){
-        let char = Math.floor(Math.random()*126)+33; //Random decimal tal av ett UTF-8 tecken
+        let char = Math.floor(Math.random()*93)+33; //Random decimal tal av ett UTF-8 tecken
         characters += String.fromCharCode(char); //String metod med index char. Allt läggs in i characters tills loopen är över.
         }
         
