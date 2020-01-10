@@ -12,6 +12,6 @@ function random() {
         let char = Math.floor(Math.random()*93)+33; //Random decimal tal av ett UTF-8 tecken
         characters += String.fromCharCode(char); //String metod med index char. Allt läggs in i characters tills loopen är över.
         }
-        
+        console.log(characters)
     return p.textContent = characters;
 }
